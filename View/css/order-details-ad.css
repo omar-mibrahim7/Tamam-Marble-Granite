@@ -1,0 +1,470 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1100px; /* كبرناه */
+  margin: 50px auto;
+  padding: 20px;
+}
+
+/* 🔥 TITLE */
+.page-title {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  font-size: 28px;
+}
+
+.page-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 6px;
+  height: 35px;
+  background: #f4b400;
+  border-radius: 5px;
+}
+
+/* CARD */
+.card {
+  background: #dcdcdc;
+  border-radius: 40px;
+  padding: 45px; /* كبرناه */
+  margin-bottom: 40px;
+}
+
+/* ❌ شيلنا البوردر الأزرق */
+.card:last-child {
+  border: none;
+}
+
+.card h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 25px;
+  border: none;
+  background: #f1f1f1;
+  outline: none;
+}
+/* تقسيم ال layout */
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+/* الجزء الشمال */
+.order-info-left {
+  display: flex;
+  gap: 25px;
+  font-size: 15px;
+}
+
+/* الجزء اليمين */
+.order-info-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Status label */
+.status-label {
+  font-weight: 500;
+}
+
+/* زرار View */
+.view-btn {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #999;
+  background: #f8f8f8;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* Dropdown */
+.status-dropdown {
+  position: relative;
+  width: 140px;
+}
+
+.selected {
+  padding: 8px 12px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+/* ألوان */
+.selected.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.selected.confirmed {
+  background: #d4edda;
+  color: #155724;
+}
+
+.selected.cancel {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* options */
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option {
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.option:hover {
+  background: #eee;
+}
+/* TABLE */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th {
+  text-align: left;
+  padding: 14px;
+  background: #eee;
+  font-weight: 500;
+}
+
+td {
+  padding: 18px 10px;
+  border-bottom: 1px solid #bbb;
+  vertical-align: middle;
+}
+
+/* IMAGE */
+td img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* PRICE */
+.price {
+  background: #e0e0e0;
+  padding: 6px 18px;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+/* SUMMARY */
+.summary {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-style: italic;
+}
+
+.summary span {
+  background: #e0e0e0;
+  padding: 6px 14px;
+  border-radius: 15px;
+}
+
+/* TOTAL */
+.total {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 2px dashed #bbb;
+  font-size: 18px;
+}
+
+.total span {
+  background: #e0e0e0;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+/* BUTTONS */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 35px;
+}
+
+.btn-outline {
+  padding: 12px 35px;
+  border: 2px solid #f4b400;
+  border-radius: 30px;
+  background: transparent;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.btn-primary {
+  padding: 12px 70px;
+  border-radius: 30px;
+  background: #1ec400;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.status-dropdown {
+  position: relative;
+  width: 160px;
+  cursor: pointer;
+}
+
+.selected {
+  padding: 10px 15px;
+  border-radius: 20px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* الحالات */
+.selected.pending {
+  background: #f4b400;
+  color: #ffffff;
+}
+
+.selected.confirmed {
+  background: #1ec400;
+  color: #ffffff;
+}
+
+.selected.in_progress {
+  background: #4285f4;
+  color: #ffffff;
+}
+
+.selected.ready {
+  background: #7b61ff;
+  color: #ffffff;
+}
+
+.selected.completed {
+  background: #16a34a;
+  color: #ffffff;
+}
+
+.selected.cancel,
+.selected.cancelled {
+  background: #ac0011;
+  color: #ffffff;
+}
+
+/* dropdown */
+.options {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  display: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.option {
+  padding: 10px;
+  text-align: center;
+}
+
+.option:hover {
+  background: #eee;
+}
+
+/* ألوان الاختيارات */
+.option.pending { color: #856404; }
+.option.confirmed { color: #155724; }
+.option.in_progress { color: #1d4ed8; }
+.option.ready { color: #6d28d9; }
+.option.completed { color: #15803d; }
+.option.cancel,
+.option.cancelled { color: #721c24; }
+
+.admin-notice {
+  padding: 12px 18px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.admin-notice.success {
+  background: #d4edda;
+  color: #155724;
+}
+
+.admin-notice.error {
+  background: #f8d7da;
+  color: #721c24;
+}
+@media print {
+    /* إخفاء كل حاجة مش محتاجها */
+    .header,
+    .side-menu,
+    .footer,
+    .page-title,
+    .admin-notice,
+    .actions,
+    .status-dropdown,
+    input[type="number"],
+    .navbaradmin,
+    nav {
+        display: none !important;
+    }
+
+    /* إخفاء الـ customer card */
+    .card:first-of-type {
+        display: none !important;
+    }
+
+    body {
+        background: white !important;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        width: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* الكارت اللي هيتطبع */
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ddd !important;
+        padding: 20px !important;
+    }
+
+    /* header الفاتورة */
+    .card::before {
+        content: "TAMAM MARBLE & GRANITE";
+        display: block;
+        text-align: center;
+        font-size: 22px;
+        font-weight: 900;
+        color: #f4c542;
+        margin-bottom: 10px;
+    }
+
+    table {
+        width: 100% !important;
+        border-collapse: collapse !important;
+    }
+
+    th, td {
+        border: 1px solid #ddd !important;
+        padding: 8px !important;
+        font-size: 12px !important;
+    }
+
+    /* إظهار الـ status كـ text مش dropdown */
+    .selected {
+        background: none !important;
+        color: #000 !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+    }
+
+    .summary {
+        margin-top: 20px !important;
+        font-size: 13px !important;
+    }
+
+    .total {
+        font-size: 16px !important;
+        font-weight: bold !important;
+        margin-top: 10px !important;
+    }
+}
+@media print {
+    .summary {
+        display: flex !important;
+        justify-content: space-between !important;
+        width: 100% !important;
+        font-size: 13px !important;
+        margin-top: 20px !important;
+    }
+
+    .summary span {
+        background: none !important;
+        padding: 0 !important;
+        border-radius: 0 !important;
+        font-weight: 600 !important;
+    }
+
+    .order-info-right {
+        display: flex !important;
+        align-items: center !important;
+    }
+
+    .status-label {
+        display: inline !important;
+    }
+}@media print {
+    /* إظهار الـ status كـ text */
+    .status-dropdown {
+        display: block !important;
+    }
+
+    .status-dropdown .options {
+        display: none !important;
+    }
+
+    /* إظهار الـ inputs كـ text */
+    input[type="number"] {
+        display: inline !important;
+        border: none !important;
+        background: none !important;
+        padding: 0 !important;
+        width: auto !important;
+    }
+
+    .summary p {
+        display: inline-block !important;
+    }
+}

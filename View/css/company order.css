@@ -1,0 +1,250 @@
+body {
+  font-family: 'Poppins', Arial;
+  background: #f5f5f5;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: #eee;
+  padding: 20px 30px;
+  border-radius: 15px;
+  margin: 20px auto;
+  width: fit-content;
+}
+
+.tabs span,
+.tabs a {
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  color: #777;
+  position: relative;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.tabs span:hover,
+.tabs a:hover {
+  color: black;
+}
+
+.tabs .active {
+  color: black;
+  font-weight: 600;
+}
+
+.tabs .active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #f4c542;
+  border-radius: 5px;
+}
+
+/* Title */
+.section-title {
+  
+  font-size: 32px;
+  font-weight: 700;
+  margin: 30px 0;
+  display: flex;
+   text-align: center;
+  justify-content: center; /* 👈 يرجعها في النص */
+  align-items: center;
+  gap: 10px;
+  padding-left: 10px;
+}
+
+.gold-bar {
+  width: 5px;
+  height: 30px;
+  background: #f4c542;
+  border-radius: 5px;
+}
+
+/* Table */
+.table {
+  background: white;
+  border-radius: 12px;
+  overflow: visible;
+}
+
+/* Layout */
+.table-header,
+.row {
+  display: grid;
+  grid-template-columns: 1.2fr 1.2fr 0.8fr 0.5fr 1.2fr 1.2fr;
+  padding: 15px;
+  align-items: center;
+}
+
+/* Header */
+.table-header {
+  background: #eee;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+/* Rows */
+.row {
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+/* 🔥 النص شمال */
+.table-header span,
+.row span {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* 🔥 عمود الـ status في النص */
+.row span:last-child,
+.table-header span:last-child {
+  justify-content: center;
+}
+
+/* hover */
+.row:hover {
+  background: #fafafa;
+}
+
+/* Actions */
+.actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+/* View Button */
+.view-btn {
+  border: 2px solid #FFD700;
+  background: transparent;
+  padding: 5px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+  color: #111;
+  text-decoration: none;
+}
+
+.view-btn:hover {
+  background: #e6c200;
+  color: white;
+}
+
+/* Status Dropdown */
+.status-dropdown {
+  position: relative;
+  width: 120px;
+  cursor: pointer;
+}
+
+/* Selected */
+.selected {
+  padding: 6px 12px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+.status-dropdown .selected {
+    min-width: 130px;
+}
+/* Dropdown */
+.options {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  display: none;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.option {
+  padding: 10px;
+  color: white;
+  text-align: center;
+}
+
+/* Colors */
+.pending { background: #f4b400; }
+.confirmed { background: #34a853; }
+.in_progress { background: #4285f4; }
+.ready { background: #7b61ff; }
+.completed { background: #16a34a; }
+.cancelled { background: #9f2323; }
+
+.option:hover {
+  opacity: 0.9;
+}
+
+.status-dropdown.active .options {
+  display: block;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+.pagination a {
+  text-decoration: none;
+}
+.circle-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid #e6b325;
+  color: #e6b325;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 3px 10px rgba(230,179,37,0.2);
+}
+
+.circle-btn:hover {
+  background: #e6b325;
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(230,179,37,0.4);
+}
+
+.circle-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.page-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: #444;
+  background: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+  border: 2px solid #e6b325;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+}

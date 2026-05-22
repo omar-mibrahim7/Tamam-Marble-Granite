@@ -1,0 +1,224 @@
+/* 🔥 CONTAINER */
+.contact-container {
+  width: 75%;
+  margin: 60px auto;
+  background: white;
+  padding: 50px 60px;
+  border-radius: 30px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  background: url("../pic/background2.png") center/cover;
+  position: relative;
+  overflow: hidden;
+}
+.contact-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0.88);
+  backdrop-filter: blur(4px);
+}
+/* 🔥 TITLE */
+.contact-container h2 {
+  font-size: 38px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #111;
+}
+
+.contact-container > * {
+  position: relative;
+  z-index: 1;
+}
+.contact-header {
+  margin-bottom: 40px;
+}
+
+.header-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.header-line .line {
+  width: 80px;
+  height: 1px;
+  background: #d4aa2a;
+}
+
+.mail-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid #d4aa2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #d4aa2a;
+  font-size: 20px;
+}
+.contact-sub {
+  color: #777;
+  font-size: 15px;
+}
+
+
+/* FORM */
+.contact-form {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.form-left { width: 48%; }
+.form-right { width: 52%; }
+
+label {
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  margin-bottom: 8px;
+  margin-top: 15px;
+}
+
+/* INPUT GROUP */
+.input-group {
+  display: flex;
+  align-items: center;
+  background: #f5f5f5;
+  border-radius: 15px;
+  padding: 0 15px;
+  margin-bottom: 5px;
+}
+
+.input-group i {
+  color: #d4aa2a;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.input-group input,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  outline: none;
+}
+
+.textarea-group {
+  align-items: flex-start;
+  padding-top: 14px;
+  height: auto;
+}
+
+.textarea-group i {
+  margin-top: 2px;
+}
+
+.input-group textarea {
+  height: 140px;
+  resize: none;
+}
+
+/* BUTTON */
+.send-btn {
+  background: #f4c430;
+  color: #000;
+  padding: 16px 50px;
+  border: none;
+  border-radius: 40px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.send-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+
+
+/* 🔥 POPUP BACKGROUND */
+.success-popup{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+  backdrop-filter: blur(8px);
+  display:none;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+/* 🔥 BOX */
+.popup-box{
+  background:#fff;
+  padding:50px 40px;
+  border-radius:30px;
+  text-align:center;
+  width:420px; /* 👈 كبرناه */
+  max-width:90%;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* 🔥 CHECK ICON */
+.check{
+  background:#1e8e3e;
+  color:#fff;
+  font-size:35px;
+  width:90px;
+  height:90px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 25px;
+}
+
+/* 🔥 TITLE */
+.popup-box h3{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+/* 🔥 TEXT */
+.popup-box p{
+  font-size:15px;
+  color:#555;
+  margin-bottom:25px;
+  line-height:1.6;
+}
+
+/* 🔥 BUTTON */
+.popup-box button{
+  background:#f4c430;
+  border:none;
+  padding:14px 35px;
+  border-radius:30px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.popup-box button:hover{
+  background:#e6b800;
+  transform:scale(1.05);
+}
+

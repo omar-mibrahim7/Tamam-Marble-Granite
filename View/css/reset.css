@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* CONTAINER */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT */
+.left{
+    width:50%;
+    background: url("../pic/bg.jpg") center/cover no-repeat;
+
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:190px;
+    margin-bottom:20px;
+}
+
+.left h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.left p{
+    width:70%;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* RIGHT */
+.right{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.right h2{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#121212;
+}
+
+.sub{
+    color:#909090;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* BOX */
+.box{
+    background:#E6E6E6;
+    padding:30px;
+    border-radius:30px;
+    width:320px;
+}
+
+/* INPUT */
+.input{
+    display:flex;
+    align-items:center;
+    background:#F5F5F5;
+    padding:14px 15px;
+    border-radius:30px;
+    margin-bottom:15px;
+    transition:0.3s;
+}
+
+.input:hover{
+    background:#eeeeee;
+}
+
+.input:focus-within{
+    border:2px solid #F6D246;
+    background:white;
+}
+
+/* ICON */
+.input i{
+    margin-right:10px;
+    color:#BDBDBD;
+    font-size:14px;
+    transition:0.3s;
+}
+
+.input:focus-within i{
+    color:#F6D246;
+}
+
+/* INPUT FIELD */
+.input input{
+    border:none;
+    outline:none;
+    background:transparent;
+    width:100%;
+    font-size:14px;
+}
+
+/* TOGGLE */
+.toggle{
+    cursor:pointer;
+    color:#BDBDBD;
+}
+
+.toggle:hover{
+    color:#F6D246;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    background:#F6D246;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button i{
+    margin-right:6px;
+}
+
+button:hover{
+    background:#e5c134;
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        width:100%;
+        height:50vh;
+    }
+}

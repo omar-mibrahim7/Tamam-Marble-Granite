@@ -1,0 +1,177 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
+}
+
+/* يخلي الفوتر دايمًا تحت */
+body{
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+}
+
+footer{
+  margin-top:auto;
+}
+
+/* FOOTER */
+.footer{
+  width:90%;
+  margin:40px auto 0;
+  padding:40px 60px;
+  background: url("../pic/background2.png") center 30% no-repeat;
+  background-size: cover;
+  border-radius:30px;
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 10px 40px rgba(0,0,0,0.15);
+}
+
+
+/* BLUR خفيف */
+.footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  background: rgba(255,255,255,0.25);
+
+  border-radius:40px;
+  z-index:1;
+}
+
+/* CONTENT */
+.footer-content{
+  position:relative;
+  z-index:2;
+
+  display:grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap:40px;
+}
+
+/* LEFT */
+.footer-left{
+  max-width:420px;
+}
+
+/* LOGO */
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:15px;
+  margin-bottom:15px;
+}
+
+.logo-box img{
+  height:70px;
+  filter: drop-shadow(0 0 8px #FFD700);
+}
+
+.logo-box h2{
+  font-size:20px;
+}
+
+
+/* TEXT */
+.footer-left p{
+  color:#444;
+  margin:15px 0 25px;
+}
+
+/* SOCIAL */
+.socials{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+
+/* الصورة */
+.social-img{
+  width:70px;
+}
+
+/* ICONS (ملونة) */
+.socials i{
+  font-size:18px;
+  background:#fff;
+  padding:10px;
+  border-radius:50%;
+  cursor:pointer;
+  transition:0.3s;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+/* ألوان */
+.fa-facebook-f{ color:#1877F2; }
+.fa-whatsapp{ color:#25D366; }
+.fa-telegram{ color:#0088cc; }
+.fa-youtube{ color:#FF0000; }
+
+/* Hover */
+.socials i:hover{
+  transform:scale(1.15);
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* LINKS + CONTACT */
+.footer-links h3,
+.footer-contact h3{
+  font-size:18px;
+  margin-bottom:15px;
+  position:relative;
+}
+
+/* underline */
+.footer-links h3::after,
+.footer-contact h3::after{
+  content:"";
+  width:40px;
+  height:2px;
+  background:#000;
+  position:absolute;
+  bottom:-8px;
+  left:0;
+  transition:0.3s;
+}
+
+/* hover */
+.footer-links h3:hover::after,
+.footer-contact h3:hover::after{
+  width:70px;
+  background:#FFD700;
+}
+
+/* LINKS */
+.footer-links{
+  display:flex;
+  flex-direction:column;
+  margin-left:20px; /* قللناها عشان تبقى متوازنة */
+}
+
+.footer-links a{
+  text-decoration:none;
+  color:#333;
+  margin:6px 0;
+  transition:0.3s;
+}
+
+.footer-links a:hover{
+  color:#FFD700;
+  padding-left:5px;
+}
+
+/* CONTACT */
+.footer-contact p{
+  margin:10px 0;
+  color:#333;
+}
+
+.footer-contact i{
+  margin-right:10px;
+}

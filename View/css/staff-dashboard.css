@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background: url("../pic/background2.png") center/cover no-repeat fixed;
+}
+
+.staff-dashboard {
+    text-align: center;
+    padding: 50px 24px 60px;
+}
+
+.staff-dashboard h2 {
+    font-size: 46px;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 55px;
+    position: relative;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: -2px;
+}
+
+.staff-dashboard h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -14px;
+    transform: translateX(-50%);
+    width: 110px;
+    height: 5px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #f5c542, #d4aa2a, #f5c542);
+}
+
+.staff-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 28px;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.staff-card {
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(255, 255, 255, 0.95);
+    border-radius: 24px;
+    padding: 38px 24px 30px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.07);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    cursor: pointer;
+}
+
+.staff-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: #F6D246;
+    border-radius: 24px 24px 0 0;
+    opacity: 0;
+    transition: opacity 0.22s;
+}
+
+.staff-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.11);
+}
+
+.staff-card:hover::before { opacity: 1; }
+
+.staff-icon {
+    width: 82px;
+    height: 82px;
+    background: #F6D246;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 18px;
+    box-shadow: 0 5px 16px rgba(246, 210, 70, 0.38);
+    transition: transform 0.22s ease;
+}
+
+.staff-card:hover .staff-icon {
+    transform: scale(1.07) rotate(-3deg);
+}
+
+.staff-icon i {
+    font-size: 28px;
+    color: #1a1a1a;
+}
+
+.staff-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 20px;
+}
+
+.staff-card a {
+    background: #F6D246;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    padding: 10px 26px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.staff-card a:hover {
+    background: #1a1a1a;
+    color: #F6D246;
+    transform: scale(1.05);
+}.staff-card button {
+    background: #F6D246;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a;
+    padding: 10px 26px;
+    border-radius: 28px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 13px;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.staff-card button:hover {
+    background: #1a1a1a;
+    color: #F6D246;
+    transform: scale(1.05);
+}

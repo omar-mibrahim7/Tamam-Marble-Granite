@@ -1,0 +1,245 @@
+:root{
+  --gold:#e2c23a;
+  --gold-deep:#c9a317;
+  --black:#101010;
+  --soft:#efefef;
+  --card:#e8e8e8;
+  --text:#222;
+  --muted:#7b7b7b;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  background:#f7f7f7;
+  color:var(--text);
+}
+
+.page-shell{
+width:min(1300px, 92%);
+  margin:50px auto;
+  min-height:420px;
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+
+.account-layout{
+ width:100%;
+  display:grid;
+  grid-template-columns:220px 1fr;
+  gap:40px;
+  align-items:flex-start;
+}
+
+.user-panel-title{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:16px;
+    text-align:center; /* 👈 يخليها في النص */
+
+}
+
+.user-panel{
+  width:220px;
+  background:white;
+  border-radius:26px;
+  padding:18px 16px 16px;
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+}
+
+.user-links{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.user-link{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:11px 10px;
+  text-decoration:none;
+  color:#2c2c2c;
+  border-radius:14px;
+  font-size:15px;
+  transition:.25s;
+}
+
+.user-link span{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.user-link i:first-child{
+  width:18px;
+  text-align:center;
+}
+
+.user-link:hover,
+.user-link.active{
+  background:#f4f4f4;
+}
+
+.user-link.active .go,
+.user-link:hover .go{
+  background:#111;
+  color:#fff;
+}
+
+.go{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  font-size:10px;
+  background:transparent;
+  transition:.25s;
+}
+
+.panel-separator{
+  height:1px;
+  background:#adadad;
+  margin:12px 0 16px;
+}
+
+.logout-btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:8px;
+  min-width:108px;
+  padding:10px 14px;
+  border-radius:999px;
+  background:transparent;
+  border:2px solid var(--gold);
+  color:#666;
+  font-size:14px;
+  font-weight:700;
+  text-decoration:none;
+  transition:.25s;
+}
+
+.logout-btn:hover{
+  background:var(--gold);
+  color:#111;
+}
+
+/* 🔥 SECTION */
+.orders-section{
+  width:100%;
+    max-width:100%;
+    margin-left:10px;
+
+}
+
+/* 🔥 WRAPPER */
+.orders-wrapper{
+  width:100%;
+  overflow-x:auto; /* 👈 سكرول لو الشاشة صغيرة */
+    padding-bottom:10px;
+
+}
+
+/* 🔥 TABLE */
+.orders-table{
+  width:100%;
+min-width:850px; 
+  border-collapse:separate;
+  border-spacing:0 15px; /* 👈 مسافة بين الصفوف */
+  font-family: Arial, sans-serif;
+}
+
+/* 🔥 HEADER */
+.orders-table thead tr{
+  background:#e5e5e5;
+}
+
+.orders-table th{
+  padding:16px;
+  text-align:center;
+  font-size:15px;
+  color:#555;
+  font-weight:600;
+}
+
+/* 🔥 ROW */
+.orders-table tbody tr{
+  background:#fff;
+  text-align:center;
+  border-radius:12px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+/* يخلي البوردر راديوس يشتغل */
+.orders-table tbody tr td:first-child{
+  border-top-left-radius:12px;
+  border-bottom-left-radius:12px;
+}
+
+.orders-table tbody tr td:last-child{
+  border-top-right-radius:12px;
+  border-bottom-right-radius:12px;
+}
+
+/* 🔥 CELLS */
+.orders-table td{
+  padding:18px 12px;
+  font-size:14px;
+  color:#333;
+  vertical-align:middle;
+}
+
+/* 🔥 MULTI LINE */
+.orders-table td br{
+  line-height:1.8;
+}
+
+/* 🔥 STATUS BASE */
+.status{
+  display:inline-block;
+  padding:6px 16px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:600;
+}
+
+/* 🔥 PENDING */
+.status.pending{
+  border:2px solid #e2c23a;
+  color:#e2c23a;
+  background:rgba(226,194,58,0.1);
+}
+
+/* 🔥 COMPLETED */
+.status.completed{
+  border:2px solid #2e7d32;
+  color:#2e7d32;
+  background:rgba(46,125,50,0.1);
+}
+
+/* 🔥 CANCELLED */
+.status.cancelled{
+  border:2px solid #c62828;
+  color:#c62828;
+  background:rgba(198,40,40,0.1);
+}
+
+/* 🔥 HOVER EFFECT */
+.orders-table tbody tr:hover{
+  transform:translateY(-3px);
+  transition:0.2s;
+}
+
+/* 🔥 RESPONSIVE */
+@media (max-width: 900px){
+  .orders-table{
+    min-width:700px;
+  }
+}
+

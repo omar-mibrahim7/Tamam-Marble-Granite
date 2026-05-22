@@ -1,0 +1,333 @@
+/* 🔥 BODY */
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f5f5f5;
+}
+/* 🔥 MAIN */
+.main-bg{
+  position: relative;
+    padding: 60px 0 120px; /* 👈 زودنا من تحت هنا */
+    margin-top: 33px; /* 👈 عدل الرقم حسب ارتفاع الناف بار */
+  z-index: 1;
+}
+
+/* 🔥 الصورة الأولى */
+/* 🔥 الصورة الأولى */
+.main-bg::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 38%; /* 👈 هنا التعديل */
+
+  background: url("../pic/background2.png") top center no-repeat;
+  background-size: cover;
+
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+/* 🔥 الصورة المقلوبة */
+.main-bg::after{
+  content: "";
+  position: absolute;
+  top: 38%; /* 👈 أهم سطر */
+  left: 0;
+  width: 100%;
+  height: 38%; /* 👈 نفس القيمة */
+
+  background: url("../pic/background2-flip.png") bottom center no-repeat;
+  background-size: cover;
+
+  filter: blur(2px);
+  transform: scale(1.05);
+  z-index: -1;
+}
+/* 🔥 TITLES */
+.section-title{
+  text-align:center;
+  font-size:34px;
+  font-weight:800;
+  margin:60px 0 30px;
+}
+
+.story{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  width:75%;
+  margin:40px auto;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border-left: 4px solid #d4aa2a;
+  transition: 0.3s;
+  background: url("../pic/background2.png") center/cover;
+  position: relative;
+}
+
+.story::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(3px);
+}
+
+.story > *{
+  position:relative;
+  z-index:1;
+}
+
+/* 🔥 WHO & STORY */
+.who,
+.story{
+  display:flex;
+  align-items:stretch;
+  gap:0;
+  width:75%;
+  margin:40px auto;
+  background:white;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+  border-left: 4px solid #d4aa2a;
+  transition: 0.3s;
+}
+.who:hover,
+.story:hover{
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+/* الصورة */
+.who img,
+.story img{
+   width:50%;
+  height:auto;
+  object-fit:cover;
+  display:block;
+}
+
+/* النص */
+.text{
+  width:50%;
+  padding:40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  background:white;
+}
+/* عنوان */
+.text h2{
+font-size:28px;
+  font-weight:800;
+  margin-bottom:15px;
+  color:#111;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.text h2::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:0;
+  width:50px;
+  height:3px;
+  background:#d4aa2a;
+  border-radius:10px;
+}
+
+/* باراجراف */
+.text p{
+  font-size:14px;
+  color:#555;
+  line-height:1.8;
+  margin-bottom:12px;
+}
+
+/* 🔥 LIST */
+.text ul{
+ list-style:none;
+  padding:0;
+  margin-top:10px;
+}
+
+.text ul li{
+  font-size:15px;
+  margin:8px 0;
+  padding-left:28px;
+  position:relative;
+  color:#333;
+}
+
+.text ul li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#d4aa2a;
+  font-size:14px;
+}
+
+/* 🔥 STORY TEXT CENTER زي الفيجما */
+.story .text{
+  text-align:center;
+}
+
+.story .text p{
+  font-size:15px;
+  font-weight:500;
+  color:#555;
+}
+
+/* 🔥 VALUES */
+.values{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  margin-top:30px;
+}
+
+.card{
+  background:#e6e6e6;
+  padding:25px;
+  border-radius:25px;
+  width:200px;
+  text-align:center;
+}
+
+.card h3{
+  font-size:18px;
+  font-weight:600;
+  margin:10px 0;
+}
+
+.card p{
+  font-size:13px;
+  color:#666;
+  line-height:1.5;
+}
+
+
+.story .text h2::after{
+  left:50%;
+  transform:translateX(-50%);
+}
+
+/* 🔥 TITLE */
+.section-title{
+  text-align:center;
+  font-size:36px;
+  font-weight:800;
+  margin:60px 0 40px;
+  color:#111;
+  position:relative;
+}
+
+.section-title::after{
+  content:"";
+  display:block;
+  width:60px;
+  height:3px;
+  background:#d4aa2a;
+  margin:12px auto 0;
+  border-radius:10px;
+}
+
+/* 🔥 VALUES */
+.values{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+  padding:0 60px;
+}
+
+/* 🔥 CARD */
+.card{
+   background:white;
+  width:280px;
+  padding:35px 25px;
+  border-radius:24px;
+  text-align:center;
+  transition:0.3s;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+  border-bottom: 3px solid #d4aa2a;
+}
+
+/* 🔥 ICON */
+.icon{
+  font-size:50px;
+  margin-bottom:15px;
+  display:flex;
+  justify-content:center;
+}
+
+/* 🔥 TITLE */
+.card h3{
+  font-size:19px;
+  font-weight:800;
+  margin-bottom:12px;
+  color:#111;
+}
+.icon{
+  margin-bottom: 15px;
+  display:flex;
+  justify-content:center;
+}
+
+.icon svg{
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.15));
+}
+/* 🔥 TEXT */
+.card p{
+  font-size:14px;
+  color:#666;
+  line-height:1.7;
+}
+
+/* 🔥 HOVER EFFECT */
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);}
+
+/* 🔥 FACILITY SECTION */
+.facility{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:25px;
+  padding:20px 60px;
+  flex-wrap:wrap;
+}
+
+/* 🔥 IMAGES */
+.facility img{
+  width:320px;
+  height:200px;
+  object-fit:cover;
+  border-radius:20px;
+  transition:0.3s;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* 🔥 HOVER */
+.facility img:hover{
+  transform:scale(1.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);}
+
+/* 🔥 DESCRIPTION */
+.desc{
+  text-align:center;
+  max-width:700px;
+  margin:30px auto 60px;
+  font-size:16px;
+  font-weight:500;
+  color:#666;
+  line-height:1.8;
+}
+

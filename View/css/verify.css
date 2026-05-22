@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Inter', sans-serif;
+}
+
+body{
+    background:#f2f2f2;
+}
+
+/* CONTAINER */
+.container{
+    display:flex;
+    height:100vh;
+}
+
+/* LEFT */
+.left{
+    width:50%;
+    background: url("../pic/bg.jpg") center/cover no-repeat;
+
+    color:white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.logo{
+    width:190px;
+    margin-bottom:20px;
+}
+
+.left h1{
+    font-size:32px;
+    margin-bottom:10px;
+}
+
+.left p{
+    width:70%;
+    font-size:14px;
+    color:#ddd;
+}
+
+/* RIGHT */
+.right{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+.right h2{
+    font-size:24px;
+    margin-bottom:10px;
+    color:#121212;
+}
+
+.sub{
+    color:#909090;
+    font-size:13px;
+    margin-bottom:20px;
+}
+
+/* BOX */
+.box{
+    background:#E6E6E6;
+    padding:30px;
+    border-radius:30px;
+    width:320px;
+    text-align:center;
+}
+
+/* OTP INPUTS */
+.otp-inputs{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:20px;
+}
+
+.otp-inputs input{
+    width:45px;
+    height:45px;
+    border-radius:10px;
+    border:none;
+    text-align:center;
+    font-size:18px;
+    background:#F5F5F5;
+    transition:0.3s;
+}
+
+/* FOCUS */
+.otp-inputs input:focus{
+    outline:none;
+    border:2px solid #F6D246;
+    background:white;
+}
+
+/* BUTTON */
+button{
+    width:100%;
+    padding:12px;
+    background:#F6D246;
+    border:none;
+    border-radius:25px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#e5c134;
+    transform:scale(1.05);
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .container{
+        flex-direction:column;
+    }
+
+    .left,
+    .right{
+        width:100%;
+        height:50vh;
+    }
+}
